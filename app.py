@@ -30,5 +30,5 @@ def create_user():
     db.session.add(new_user)
     db.session.commit()
     return make_response(jsonify({'message': 'user created'}), 201)
-  except e:
+  except Exception:
     return make_response(jsonify({'message': 'error creating user'}), 500)
