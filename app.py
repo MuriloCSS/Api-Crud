@@ -17,3 +17,18 @@ class User(db.Model):
         return {'id': self.id,'username': self.username, 'email': self.email}
 
 db.create_all()
+
+@app.route('/test', methods=['GET'])
+def test():
+  return make_response(jsonify({'message': 'test route'}), 200)
+
+@app.route('/users', methods=['POST'])
+def create_user():
+  try:
+    data = request.get_json()
+    new_user = User(username=data['username'], email=data['email'])
+    db.session.add(new_user)
+    db.session.commit()
+    return make_response(jsonify({'message': 'user created'}), 201)
+  except e:
+    return make_response(jsonify({'message': 'error creating user'}), 500)
