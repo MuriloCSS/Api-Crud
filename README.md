@@ -7,14 +7,15 @@ Este projeto é uma API RESTful simples com suporte a operações **CRUD (Create
 - [Flask](https://flask.palletsprojects.com/) — microframework web Python
 - [Flask SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/) — ORM para integração com banco de dados
 - [SQLite/PostgreSQL](https://www.sqlite.org/index.html) — banco de dados relacional (dependendo do ambiente)
-- [Docker](https://www.docker.com/) — containerização da aplicação (opcional)
-- [Postman](https://www.postman.com/) — para testes das rotas (opcional)
+- [Docker](https://www.docker.com/) — containerização da aplicação
+- [Postman](https://www.postman.com/) — para testes das rotas
 
 ## 📡 Rotas da API
 
 | Método | Endpoint        | Descrição                  |
 |--------|------------------|-----------------------------|
 | GET    | `/users`         | Lista todos os usuários     |
+| GET    | `/users/<id>`    | Lista um usuários por id    |
 | POST   | `/users`         | Cria um novo usuário        |
 | PUT    | `/users/<id>`    | Atualiza um usuário por ID  |
 | DELETE | `/users/<id>`    | Remove um usuário por ID    |
@@ -23,7 +24,7 @@ Este projeto é uma API RESTful simples com suporte a operações **CRUD (Create
 
 Você pode utilizar o **Postman** ou **Insomnia** para fazer requisições HTTP às rotas da API.
 
-🐳 Rodando com Docker
+## 🐳 Rodando com Docker
 
 # Clone o repositório
 git clone https://github.com/MuriloCSS/Api-Crud.git
