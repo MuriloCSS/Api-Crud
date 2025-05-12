@@ -15,7 +15,7 @@ Este projeto é uma API RESTful simples com suporte a operações **CRUD (Create
 | Método | Endpoint        | Descrição                  |
 |--------|------------------|-----------------------------|
 | GET    | `/users`         | Lista todos os usuários     |
-| GET    | `/users/<id>`    | Lista um usuários por id    |
+| GET    | `/users/<id>`    | Lista um usuário por id     |
 | POST   | `/users`         | Cria um novo usuário        |
 | PUT    | `/users/<id>`    | Atualiza um usuário por ID  |
 | DELETE | `/users/<id>`    | Remove um usuário por ID    |
@@ -26,16 +26,16 @@ Você pode utilizar o **Postman** ou **Insomnia** para fazer requisições HTTP 
 
 ## 🐳 Rodando com Docker
 
-# Clone o repositório
+**Clone o repositório**
 git clone https://github.com/MuriloCSS/Api-Crud.git
 cd Api-Crud
 
-# Construa a imagem
+**Construa a imagem**
 docker compose build
 
-# Suba os containers (aplicação + banco de dados)
+**Suba os containers (aplicação + banco de dados)**
 docker compose up -d
 
-# Acesse a API em: http://localhost:4000
+**Acesse a API em: http://localhost:4000**
 
 
