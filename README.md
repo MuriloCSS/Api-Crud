@@ -27,13 +27,16 @@ Você pode utilizar o **Postman** ou **Insomnia** para fazer requisições HTTP 
 ## 🐳 Rodando com Docker
 
 **Clone o repositório**
+
 git clone https://github.com/MuriloCSS/Api-Crud.git
 cd Api-Crud
 
 **Construa a imagem**
+
 docker compose build
 
 **Suba os containers (aplicação + banco de dados)**
+
 docker compose up -d
 
 **Acesse a API em: http://localhost:4000**
