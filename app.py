@@ -32,3 +32,21 @@ def create_user():
     return make_response(jsonify({'message': 'user created'}), 201)
   except Exception:
     return make_response(jsonify({'message': 'error creating user'}), 500)
+  
+@app.route('/users', methods=['GET'])
+def get_users():
+  try:
+    users = User.query.all()
+    return make_response(jsonify([user.json() for user in users]), 200)
+  except Exception:
+    return make_response(jsonify({'message': 'error getting users'}), 500)
+
+@app.route('/users/<int:id>', methods=['GET'])
+def get_user(id):
+  try:
+    user = User.query.filter_by(id=id).first()
+    if user:
+      return make_response(jsonify({'user': user.json()}), 200)
+    return make_response(jsonify({'message': 'user not found'}), 404)
+  except Exception:
+    return make_response(jsonify({'message': 'error getting user'}), 500)  
