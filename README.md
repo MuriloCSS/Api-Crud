@@ -31,13 +31,17 @@ Você pode utilizar o **Postman** ou **Insomnia** para fazer requisições HTTP 
 + git clone https://github.com/MuriloCSS/Api-Crud.git
 + cd Api-Crud
 
+**Inicia o serviço do banco de dados**
+
++ docker compose up -d flask_db 
+
 **Construa a imagem**
 
 + docker compose build
 
-**Suba os containers (aplicação + banco de dados)**
+**Inicia o serviço da aplicação Flask**
 
-+ docker compose up -d
++ docker compose up flask_app
 
 **Acesse a API em: http://localhost:4000**
 
